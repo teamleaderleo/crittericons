@@ -62,7 +62,7 @@ export const CatIcon = React.forwardRef<SVGSVGElement, CritterIconProps>(
   (props, ref) => (
     <IconFrame ref={ref} {...props}>
       <path
-        d="M6.2 15.8c0-3.1 2.5-5.3 5.9-5.3s5.9 2.2 5.9 5.3c0 2.6-1.7 4-4.3 4H10.5c-2.6 0-4.3-1.4-4.3-4Z"
+        d="M5.8 16c0-3.3 2.7-5.6 6.2-5.6s6.2 2.3 6.2 5.6c0 2.5-1.7 3.9-4.4 3.9H10.2C7.5 19.9 5.8 18.5 5.8 16Z"
         fill="#CFC0F6"
       />
       <path
@@ -75,12 +75,12 @@ export const CatIcon = React.forwardRef<SVGSVGElement, CritterIconProps>(
         strokeWidth={2.6}
       />
       <path d="M16.8 17.7c2.1.4 3.5-.5 3.4-1.8-.1-1-.9-1.5-1.6-1.1" />
-      <ellipse cx="12" cy="13.1" rx="2.3" ry="1.8" fill="#FFF3E5" stroke="none" />
-      <circle cx="9.6" cy="10.4" r=".55" fill="currentColor" stroke="none" />
-      <circle cx="14.4" cy="10.4" r=".55" fill="currentColor" stroke="none" />
-      <path d="M11.4 12.3c.4.3.8.3 1.2 0M12 12.4v.6M10.9 13.3c.6.6 1.6.6 2.2 0" />
-      <path d="M8.2 12.3 5.4 11.8M8.1 13.5l-2.5.7M15.8 12.3l2.8-.5M15.9 13.5l2.5.7" />
-      <path d="M9 17.4h6M10 17.4v2M14 17.4v2" />
+      <ellipse cx="12" cy="13" rx="2.2" ry="1.7" fill="#FFF3E5" stroke="none" />
+      <path d="M8.9 10.5c.5.4 1.1.4 1.6 0M13.5 10.5c.5.4 1.1.4 1.6 0" />
+      <path d="M11.4 12.2c.4.3.8.3 1.2 0M12 12.3v.6M10.9 13.2c.6.6 1.6.6 2.2 0" />
+      <path d="M8.2 12.2 5.4 11.7M8.1 13.4l-2.5.7M15.8 12.2l2.8-.5M15.9 13.4l2.5.7" />
+      <ellipse cx="9.7" cy="18.4" rx="1.35" ry=".75" fill="#B4A3E9" stroke="none" />
+      <ellipse cx="14.3" cy="18.4" rx="1.35" ry=".75" fill="#B4A3E9" stroke="none" />
     </IconFrame>
   ),
 );
@@ -98,11 +98,11 @@ export const DogIcon = React.forwardRef<SVGSVGElement, CritterIconProps>(
         fill="#F1BC79"
       />
       <path
-        d="M7.5 8.3C5.8 6 3.5 5.5 3 6.8c-.5 1.4.8 5 2.5 5.9.8.4 1.5-.2 1.5-1"
+        d="M7.5 8.5C6 7 4.1 6.5 3.5 7.6c-.7 1.3.5 4.4 2 5.2.8.4 1.5-.1 1.5-1"
         fill="#CE7C52"
       />
       <path
-        d="M16.5 8.3c1.7-2.3 4-2.8 4.5-1.5.5 1.4-.8 5-2.5 5.9-.8.4-1.5-.2-1.5-1"
+        d="M16.5 8.5c1.5-1.5 3.4-2 4-.9.7 1.3-.5 4.4-2 5.2-.8.4-1.5-.1-1.5-1"
         fill="#CE7C52"
       />
       <path d="M16.6 18.1c2 .4 3.5-.4 3.5-1.6 0-.9-.7-1.4-1.4-1.1" />
@@ -115,7 +115,8 @@ export const DogIcon = React.forwardRef<SVGSVGElement, CritterIconProps>(
       />
       <path d="M10.5 14.2c.4.4.9.6 1.5.6s1.1-.2 1.5-.6" />
       <path d="M11.2 14.8c0 .9.3 1.4.8 1.4s.8-.5.8-1.4" fill="#E77E8E" />
-      <path d="M9.8 17.6v2.2M14.2 17.6v2.2" />
+      <ellipse cx="9.8" cy="18.7" rx="1.2" ry=".65" fill="#D28D55" stroke="none" />
+      <ellipse cx="14.2" cy="18.7" rx="1.2" ry=".65" fill="#D28D55" stroke="none" />
     </IconFrame>
   ),
 );
