@@ -19,7 +19,7 @@ Every icon should:
 
 - Use a `0 0 24 24` view box
 - Use `currentColor`
-- Default to a `1.75` stroke width
+- Default to a `1.5` stroke width
 - Use rounded caps and joins
 - Stay readable at 16px
 - Feel friendly, simple, and recognizable
