@@ -19,7 +19,7 @@ Every icon should:
 
 - Use a `0 0 24 24` view box
 - Use `currentColor`
-- Default to a `1.75` stroke width
+- Default to a `1.5` stroke width
 - Use rounded caps and joins
 - Stay readable at 16px
 - Feel friendly, simple, and recognizable
@@ -37,7 +37,11 @@ Every icon should:
 npm install
 npm run typecheck
 npm run build
+npx playwright install chromium
+npm run visual-review
 ```
+
+Open `artifacts/visual-review/icon-sheet.png` and inspect the icon at every displayed size. The pull-request workflow uploads the same visual review as an artifact, so reviewers can judge personality, silhouette, spacing, and tiny-size readability from the exact commit.
 
 ## Commit style
 
