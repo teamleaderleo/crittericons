@@ -19,7 +19,7 @@ Every icon should:
 
 - Use a `0 0 24 24` view box
 - Use soft pastel fills and dark rounded ink
-- Default to a `1.15` stroke width
+- Default to a `1.1` stroke width
 - Use rounded caps and joins
 - Show a complete mascot silhouette or an equally expressive pose
 - Stay readable at 16px
