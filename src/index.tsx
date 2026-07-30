@@ -171,7 +171,8 @@ export const DinoIcon = React.forwardRef<SVGSVGElement, CritterIconProps>(
       <path d="M8.5 17.4 7.4 20h2.5M13.3 17.8l.8 2.2h2.5" fill="#E88491" />
       <path d="M15.4 13.2c.9.2 1.7.7 2.2 1.4M15.7 14.3l1.5.4" />
       <circle cx="18.6" cy="7.5" r=".6" fill="currentColor" stroke="none" />
-      <path d="M19.5 9.2c.5.3 1 .3 1.5 0M20.9 10.7l-.5.7" />
+      <path d="M19.5 9.2c.5.3 1 .3 1.5 0" />
+      <path d="m20.1 10.5 1 .05-.55.85Z" fill="#FFF3E5" stroke="none" />
       <circle cx="16.4" cy="9.9" r=".45" fill="#F7C6BB" stroke="none" />
     </IconFrame>
   ),
