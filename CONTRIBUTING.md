@@ -1,0 +1,50 @@
+# Contributing to Crittericons
+
+Thanks for helping the tiny creatures multiply.
+
+## Proposing a critter
+
+Open an issue with:
+
+- The animal or creature
+- A reference pose or a quick sketch you made
+- Any expression or prop ideas
+- Where you imagine using the icon
+
+Please avoid tracing existing commercial icon sets or copyrighted character designs.
+
+## Drawing guidelines
+
+Every icon should:
+
+- Use a `0 0 24 24` view box
+- Use `currentColor`
+- Default to a `1.75` stroke width
+- Use rounded caps and joins
+- Stay readable at 16px
+- Feel friendly, simple, and recognizable
+- Avoid embedded raster images, fonts, masks, and unnecessary metadata
+
+## Adding an icon
+
+1. Add the React component to `src/index.tsx`.
+2. Add its matching raw asset to `svg/`.
+3. Export the component with a descriptive PascalCase name ending in `Icon`.
+4. Add it to the icon table in `README.md`.
+5. Run the checks:
+
+```bash
+npm install
+npm run typecheck
+npm run build
+```
+
+## Commit style
+
+Use clear commits such as:
+
+- `feat: add axolotl icon`
+- `fix: improve turtle silhouette at 16px`
+- `docs: add raw SVG example`
+
+By contributing, you agree that your contribution will be released under the MIT License.
