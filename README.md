@@ -2,7 +2,7 @@
 
 Cute little animal SVG icons for interfaces, empty states, buttons, docs, games, and anywhere else that needs a tiny friend.
 
-Crittericons currently includes a cat, dog, turtle, and dinosaur. Every icon is hand-drawn on a 24×24 grid, uses `currentColor`, and ships as both a typed React component and a raw SVG file.
+Crittericons currently includes a cat, dog, turtle, and dinosaur. Every icon is hand-drawn on a 24×24 grid with a soft pastel palette, dark `currentColor` ink, and a complete tiny-mascot silhouette. Each critter ships as both a typed React component and a raw SVG file.
 
 ## Install
 
@@ -20,14 +20,14 @@ export function TinyFriends() {
     <div style={{ display: "flex", gap: 12 }}>
       <CatIcon title="Cat" />
       <DogIcon size={32} title="Dog" />
-      <TurtleIcon strokeWidth={1.5} title="Turtle" />
-      <DinoIcon className="text-lime-600" title="Dinosaur" />
+      <TurtleIcon color="#24443d" title="Turtle" />
+      <DinoIcon size={40} title="Dinosaur" />
     </div>
   );
 }
 ```
 
-All regular SVG props are supported. Omit `title` for decorative icons; Crittericons will hide them from assistive technology automatically.
+All regular SVG props are supported. The `color` prop controls the dark ink while each animal keeps its own pastel fills. Omit `title` for decorative icons; Crittericons will hide them from assistive technology automatically.
 
 ## Raw SVG
 
@@ -51,9 +51,10 @@ You can also copy files directly from the [`svg`](./svg) directory.
 ## Design rules
 
 - 24×24 view box
-- Rounded line caps and joins
-- `currentColor` strokes
-- Friendly silhouettes that remain readable at 16px
+- Soft pastel fills with dark rounded ink
+- `currentColor` controls React-component ink
+- Complete mascot silhouettes instead of floating heads
+- Friendly expressions that remain readable at 16px
 - Minimal detail, maximum personality
 - Accessible defaults
 

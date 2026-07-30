@@ -1,7 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Turtle">
-  <ellipse cx="11" cy="13.2" rx="6.4" ry="4.7"/>
-  <path d="M17 11.2h1.5a2.7 2.7 0 1 1 0 5.4H17M4.7 12.4 2.4 14l2.4.7"/>
-  <path d="M8 9.3c1.2 1 2 2.3 2.4 3.9M14 9.3c-1.2 1-2 2.3-2.4 3.9M5 13.2h12"/>
-  <path d="M7.1 16.5 6.4 19M10.2 17.7 10 20M14.2 17.1l.5 2.4"/>
-  <path d="M19.2 13h.01M19.1 14.5c.4.3.8.3 1.1 0"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#382F46" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Turtle">
+  <path d="M4.4 14.6c.5-4.4 3.7-7.2 7.7-7.2 3.2 0 5.8 1.8 6.8 4.8v3.2H5.3Z" fill="#74BA8B"/>
+  <path d="M5.2 12.2 2.5 14.1l2.9.9" fill="#A2D89F"/>
+  <path d="M16.8 11.8c.8-1.4 2-2.2 3.4-2.2 1.9 0 3.2 1.5 3.2 3.5 0 2.4-1.8 4.2-4.4 4.2h-2.3l.2-4.8Z" fill="#A2D89F"/>
+  <path d="M7.2 15.2c-.9 1.7-.7 3 .4 3.3 1.1.3 2-.8 2.3-2.6M14 15.2c.2 1.8 1.1 2.9 2.2 2.6 1-.3 1.2-1.6.4-3.1" fill="#A2D89F"/>
+  <path d="M7 10.6c1.3-1.2 2.9-1.8 4.9-1.8s3.6.6 4.9 1.8M6.2 13h12"/>
+  <path d="M9 8.1 7.8 12.8M14.7 8.2l1.2 4.6"/>
+  <circle cx="20.5" cy="12.3" r=".6" fill="#382F46" stroke="none"/>
+  <path d="M19.5 14.4c.7.7 1.6.7 2.3 0"/>
 </svg>
