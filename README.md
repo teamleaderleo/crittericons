@@ -65,6 +65,24 @@ npm run typecheck
 npm run build
 ```
 
+## Visual review
+
+Every push to `main` and every pull request generates a visual-review artifact containing:
+
+- `desktop.png` — the complete gallery at desktop width
+- `mobile.png` — the responsive gallery at mobile width
+- `icon-sheet.png` — close-ups and 16px, 24px, 32px, and 48px comparisons
+- `gallery.html` — the review page for local inspection
+
+To capture the same screenshots locally:
+
+```bash
+npx playwright install chromium
+npm run visual-review
+```
+
+The generated files appear in `artifacts/visual-review/`. Review the tiny-size lineup first: eyes, mouths, feet, tails, and silhouettes should remain recognizable without turning muddy.
+
 ## Roadmap
 
 - More animals, sea creatures, bugs, dinosaurs, and imaginary beasts
