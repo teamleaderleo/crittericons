@@ -1,0 +1,55 @@
+{
+  "name": "crittericons",
+  "version": "0.0.1",
+  "description": "Cute animal SVG icons for React.",
+  "license": "MIT",
+  "author": "teamleaderleo",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "svg"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./svg/*": "./svg/*"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.9",
+    "react": "^19.1.1",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  },
+  "keywords": [
+    "icons",
+    "svg",
+    "react",
+    "animals",
+    "cute",
+    "critters"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teamleaderleo/crittericons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/teamleaderleo/crittericons/issues"
+  },
+  "homepage": "https://github.com/teamleaderleo/crittericons#readme"
+}
