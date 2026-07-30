@@ -1,9 +1,9 @@
 import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
-import { basename, join, resolve } from "node:path";
-import { pathToFileURL } from "node:url";
+import { basename, dirname, join, resolve } from "node:path";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { chromium } from "playwright";
 
-const root = resolve(import.meta.dirname, "..");
+const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const svgDirectory = join(root, "svg");
 const outputDirectory = join(root, "artifacts", "visual-review");
 
@@ -26,11 +26,23 @@ const critters = await Promise.all(
   })),
 );
 
+function escapeAttribute(value) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
+}
+
 function iconMarkup(svg, size, label) {
-  return svg.replace(
-    /<svg\b/u,
-    `<svg width="${size}" height="${size}" aria-label="${label}" data-review-size="${size}"`,
-  );
+  return svg.replace(/<svg\b([^>]*)>/u, (_match, attributes) => {
+    const cleanedAttributes = attributes.replace(
+      /\s(?:width|height|role|aria-label|aria-hidden|data-review-size)="[^"]*"/gu,
+      "",
+    );
+
+    return `<svg${cleanedAttributes} width="${size}" height="${size}" role="img" aria-label="${escapeAttribute(label)}" data-review-size="${size}">`;
+  });
 }
 
 function critterCard(critter, index) {
