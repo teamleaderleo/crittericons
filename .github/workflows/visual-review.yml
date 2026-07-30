@@ -1,0 +1,53 @@
+name: Visual review
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  screenshots:
+    name: Capture critter screenshots
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Build package
+        run: npm run build
+
+      - name: Capture visual review
+        run: npm run visual-review
+
+      - name: Upload screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: crittericons-visual-review-${{ github.sha }}
+          path: artifacts/visual-review/
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Add review instructions
+        run: |
+          echo "## Crittericons visual review" >> "$GITHUB_STEP_SUMMARY"
+          echo "Download the **crittericons-visual-review-${GITHUB_SHA}** artifact to inspect:" >> "$GITHUB_STEP_SUMMARY"
+          echo "- desktop.png" >> "$GITHUB_STEP_SUMMARY"
+          echo "- mobile.png" >> "$GITHUB_STEP_SUMMARY"
+          echo "- icon-sheet.png" >> "$GITHUB_STEP_SUMMARY"
+          echo "- gallery.html" >> "$GITHUB_STEP_SUMMARY"
